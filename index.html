@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Day</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .footer-link:hover {
+        color: #4ade80;
+      }
+      .popup {
+        transition: opacity 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 relative pb-24 font-sans">
+    <!-- Header Announcement -->
+    <div class="bg-gradient-to-r from-green-300 to-green-100 text-center text-sm py-2 uppercase tracking-widest shadow font-semibold">
+      Shop Our Newest Collection on Etsy
+    </div><!-- Navbar -->
+<nav class="flex justify-between items-center px-6 py-4 bg-white/80 backdrop-blur shadow-md sticky top-0 z-40">
+  <div class="space-x-4">
+    <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 transition font-medium">Tentang</a>
+    <a href="kontak.html" class="text-sm text-gray-700 hover:text-green-700 transition font-medium">Kontak</a>
+  </div>
+  <div class="flex gap-4">
+    <a href="https://www.instagram.com/official_greendays?igsh=MTQ0dzVvdmdjZTc4aQ==" target="_blank">
+      <img class="w-5 hover:scale-110 transition-transform" src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" />
+    </a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="text-center py-24 bg-gradient-to-b from-white to-green-50" data-aos="fade-up">
+  <p class="uppercase tracking-widest text-sm mb-2 text-green-600 font-semibold">Calm Green Day</p>
+  <img src="https://img.icons8.com/ios/100/leaf.png" class="mx-auto mb-4 w-20 animate-pulse" />
+  <h1 class="text-5xl font-extrabold tracking-wide text-gray-900 drop-shadow-sm">GREEN DAY</h1>
+</section>
+
+<!-- Best Sellers -->
+<section class="bg-white py-20 px-6 text-center" data-aos="fade-up">
+  <h2 class="text-2xl tracking-wide mb-10 font-bold text-gray-800">Best Sellers</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
+    <!-- Product -->
+    <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Boxy Hoodie Brown', 'Hoodie berbahan fleece tebal, cocok untuk musim hujan.')">
+      <img src="https://via.placeholder.com/150" class="rounded-xl mb-2" />
+      <p class="font-semibold text-gray-800">Boxy Hoodie Brown</p>
+      <p class="text-sm text-gray-500">Rp. 250.000</p>
+    </div>
+    <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Kaos Boxy Oversize', 'Kaos oversize dengan bahan katun premium.')">
+      <img src="https://via.placeholder.com/150" class="rounded-xl mb-2" />
+      <p class="font-semibold text-gray-800">Kaos Boxy Oversize</p>
+      <p class="text-sm text-gray-500">Rp. 110.000</p>
+    </div>
+    <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('H1 Baggy Rusted Bronze', 'Celana baggy warna eksklusif untuk gaya urban.')">
+      <img src="https://via.placeholder.com/150" class="rounded-xl mb-2" />
+      <p class="font-semibold text-gray-800">H1 Baggy Rusted Bronze</p>
+      <p class="text-sm text-gray-500">Rp. 450.000</p>
+    </div>
+    <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Boxy Hoodie Black', 'Hoodie warna hitam elegan dengan potongan boxy.')">
+      <img src="https://via.placeholder.com/150" class="rounded-xl mb-2" />
+      <p class="font-semibold text-gray-800">Boxy Hoodie Black</p>
+      <p class="text-sm text-gray-500">Rp. 250.000</p>
+    </div>
+  </div>
+  <button class="mt-10 px-8 py-3 bg-green-700 text-white rounded-full hover:bg-green-800 transition shadow-md font-semibold">Lihat Semua Produk</button>
+</section>
+
+<!-- Popup Modal -->
+<div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+  <div class="bg-white p-6 rounded-xl shadow-xl max-w-md w-full popup">
+    <h3 id="popup-title" class="text-xl font-bold mb-2"></h3>
+    <p id="popup-desc" class="text-gray-600 mb-4"></p>
+    <button onclick="closePopup()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Tutup</button>
+  </div>
+</div>
+
+<!-- Philosophy -->
+<section class="flex flex-col md:flex-row items-center justify-center gap-12 px-6 py-24 bg-gray-100" data-aos="fade-up">
+  <div class="max-w-md text-left">
+    <h3 class="text-2xl font-bold mb-4 text-gray-800">Our Philosophy</h3>
+    <p class="text-gray-600 leading-relaxed">
+      In the context of fashion philosophy, the hoodie can be seen as a symbol of rebellion or rejection of social norms or conventions, which is often related to individual freedom and self-expression.
+    </p>
+  </div>
+  <img src="https://via.placeholder.com/250x300" class="rounded-2xl w-64 shadow-xl" />
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white text-sm pt-12 pb-6 px-6" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <div>
+        <h4 class="font-bold text-lg mb-4 text-white">Tentang Kami</h4>
+        <p class="text-gray-400 leading-relaxed">Green Day adalah brand fashion yang menghadirkan kenyamanan dan gaya dalam satu kesatuan. Terima kasih telah mengunjungi website kami.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-4 text-white">Navigasi</h4>
+        <ul class="space-y-2">
+          <li><a href="tentang.html" class="footer-link text-gray-300">Tentang</a></li>
+          <li><a href="kontak.html" class="footer-link text-gray-300">Kontak</a></li>
+          <li><a href="produk.html" class="footer-link text-gray-300">Produk</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-4 text-white">Berlangganan</h4>
+        <p class="text-gray-400 mb-3">Masukkan email Anda untuk mendapatkan info produk terbaru:</p>
+        <div class="flex">
+          <input type="email" placeholder="Email Anda" class="w-full px-3 py-2 rounded-l bg-white text-black" />
+          <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r">Kirim</button>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400 text-xs">&copy; 2025 Green Day. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="https://www.instagram.com/official_greendays?igsh=MTQ0dzVvdmdjZTc4aQ==" target="_blank" class="hover:opacity-75">
+          <img src="https://img.icons8.com/ios-glyphs/24/ffffff/instagram-new.png" />
+        </a>
+        <a href="https://wa.me/6285876125581" target="_blank" class="hover:opacity-75">
+          <img src="https://img.icons8.com/ios-glyphs/24/ffffff/whatsapp.png" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Navigation Button -->
+<div class="fixed bottom-6 inset-x-0 flex justify-center z-50">
+  <div class="bg-white/90 backdrop-blur shadow-lg rounded-full flex space-x-6 px-8 py-3 border animate-bounce hover:animate-none transition-all duration-500">
+    <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 transition font-semibold">Tentang</a>
+    <a href="produk.html" class="text-sm text-gray-700 hover:text-green-700 transition font-semibold">Produk</a>
+    <a href="kontak.html" class="text-sm text-gray-700 hover:text-green-700 transition font-semibold">Kontak</a>
+  </div>
+</div>
+
+<script>
+  AOS.init();
+  function showPopup(title, desc) {
+    document.getElementById('popup-title').innerText = title;
+    document.getElementById('popup-desc').innerText = desc;
+    document.getElementById('popup').classList.remove('hidden');
+  }
+  function closePopup() {
+    document.getElementById('popup').classList.add('hidden');
+  }
+</script>
+
+  </body>
+</html>
