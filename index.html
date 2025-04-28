@@ -1,28 +1,32 @@
-<!DOCTYPE html><html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Green Day</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      .footer-link:hover {
-        color: #4ade80;
-      }
-      .popup {
-        transition: opacity 0.3s ease;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 text-gray-800 relative pb-24 font-sans">
-    <!-- Header Announcement -->
-    <div class="bg-gradient-to-r from-green-300 to-green-100 text-center text-sm py-2 uppercase tracking-widest shadow font-semibold">
-      Shop Our Newest Collection on Etsy
-    </div><!-- Navbar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Day</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .footer-link:hover {
+      color: #4ade80;
+    }
+    .popup {
+      transition: opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 relative pb-24 font-sans">
+
+<!-- Header Announcement -->
+<div class="bg-gradient-to-r from-green-300 to-green-100 text-center text-sm py-2 uppercase tracking-widest shadow font-semibold">
+  Shop Our Newest Collection on Etsy
+</div>
+
+<!-- Navbar -->
 <nav class="flex justify-between items-center px-6 py-4 bg-white/80 backdrop-blur shadow-md sticky top-0 z-40">
   <div class="space-x-4">
     <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 transition font-medium">Tentang</a>
@@ -46,24 +50,27 @@
 <section class="bg-white py-20 px-6 text-center" data-aos="fade-up">
   <h2 class="text-2xl tracking-wide mb-10 font-bold text-gray-800">Best Sellers</h2>
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
-    <!-- Product -->
+    <!-- Product 1 -->
     <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Boxy Hoodie Brown', 'Hoodie berbahan fleece tebal, cocok untuk musim hujan.')">
-      <img src="https://via.placeholder.com/150" class="rounded-xl mb-2" />
+      <img src="img/hoodie-brown.jpg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">Boxy Hoodie Brown</p>
       <p class="text-sm text-gray-500">Rp. 250.000</p>
     </div>
+    <!-- Product 2 -->
     <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Kaos Boxy Oversize', 'Kaos oversize dengan bahan katun premium.')">
-      <img src="<a href="https://i.ibb.co/1Fjwjtq/Whats-App-Image-2025-04-28-at-09-16-13-1.jpg" class="rounded-xl mb-2" />
+      <img src="img/kaos-boxy-oversize.jpg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">Kaos Boxy Oversize</p>
       <p class="text-sm text-gray-500">Rp. 110.000</p>
     </div>
+    <!-- Product 3 -->
     <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('H1 Baggy Rusted Bronze', 'Celana baggy warna eksklusif untuk gaya urban.')">
-      <img src="https://via.placeholder.com/150" class="rounded-xl mb-2" />
+      <img src="img/baggy-bronze.jpg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">H1 Baggy Rusted Bronze</p>
       <p class="text-sm text-gray-500">Rp. 450.000</p>
     </div>
+    <!-- Product 4 -->
     <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Boxy Hoodie Black', 'Hoodie warna hitam elegan dengan potongan boxy.')">
-      <img src="https://via.placeholder.com/150" class="rounded-xl mb-2" />
+      <img src="img/hoodie-black.jpg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">Boxy Hoodie Black</p>
       <p class="text-sm text-gray-500">Rp. 250.000</p>
     </div>
@@ -88,7 +95,7 @@
       In the context of fashion philosophy, the hoodie can be seen as a symbol of rebellion or rejection of social norms or conventions, which is often related to individual freedom and self-expression.
     </p>
   </div>
-  <img src="https://via.placeholder.com/250x300" class="rounded-2xl w-64 shadow-xl" />
+  <img src="img/philosophy.jpg" class="rounded-2xl w-64 shadow-xl" />
 </section>
 
 <!-- Footer -->
@@ -151,5 +158,5 @@
   }
 </script>
 
-  </body>
+</body>
 </html>
