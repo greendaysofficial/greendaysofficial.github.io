@@ -17,9 +17,22 @@
     .popup {
       transition: opacity 0.3s ease;
     }
+    @keyframes fadein {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadein {
+      animation: fadein 0.8s ease-out forwards;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 relative pb-40 font-sans">
+<body class="bg-gray-50 text-gray-800 relative pb-24 font-sans">
 
 <!-- Header Announcement -->
 <div class="bg-gradient-to-r from-green-300 to-green-100 text-center text-sm py-2 uppercase tracking-widest shadow font-semibold">
@@ -50,35 +63,30 @@
 <section class="bg-white py-20 px-6 text-center" data-aos="fade-up">
   <h2 class="text-2xl tracking-wide mb-10 font-bold text-gray-800">Best Sellers</h2>
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
-    <!-- Product 1 -->
     <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Boxy Hoodie Brown', 'Hoodie berbahan fleece tebal, cocok untuk musim hujan.')">
       <img src="img/h1.jpeg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">Boxy Hoodie Brown</p>
       <p class="text-sm text-gray-500">Rp. 250.000</p>
     </div>
-    <!-- Product 2 -->
     <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Kaos Boxy Oversize', 'Kaos oversize dengan bahan katun premium.')">
       <img src="img/kaos.jpeg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">Kaos Boxy Oversize</p>
       <p class="text-sm text-gray-500">Rp. 110.000</p>
     </div>
-    <!-- Product 3 -->
     <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('H1 Baggy Rusted Bronze', 'Celana baggy warna eksklusif untuk gaya urban.')">
       <img src="img/clna.jpeg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">H1 Baggy Rusted Bronze</p>
       <p class="text-sm text-gray-500">Rp. 450.000</p>
     </div>
-    <!-- Product 4 -->
     <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Boxy Hoodie Black', 'Hoodie warna hitam elegan dengan potongan boxy.')">
       <img src="img/h2.jpeg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">Boxy Hoodie Black</p>
       <p class="text-sm text-gray-500">Rp. 250.000</p>
     </div>
   </div>
-  <button onclick="location.href='produk.html'" class="mt-10 px-8 py-3 bg-green-700 text-white rounded-full hover:bg-green-800 transition shadow-md font-semibold">
-    Lihat Semua Produk
-  </button>
-</section>
+ <button onclick="location.href='produk.html'" class="mt-10 px-8 py-3 bg-green-700 text-white rounded-full hover:bg-green-800 transition shadow-md font-semibold">
+  Lihat Semua Produk
+</button>
 
 <!-- Popup Modal -->
 <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
@@ -140,7 +148,7 @@
 </footer>
 
 <!-- Floating Navigation Button -->
-<div class="fixed bottom-20 inset-x-0 flex justify-center z-50">
+<div class="fixed bottom-20 inset-x-0 flex justify-center z-50 animate-fadein">
   <div class="bg-white/90 backdrop-blur shadow-lg rounded-full flex space-x-6 px-8 py-3 border shadow-xl hover:scale-105 transition-transform">
     <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 transition font-semibold">Tentang</a>
     <a href="produk.html" class="text-sm text-gray-700 hover:text-green-700 transition font-semibold">Produk</a>
