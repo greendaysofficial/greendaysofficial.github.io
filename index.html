@@ -1,115 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Green Day</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .footer-link:hover { color: #4ade80; }
-  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gradient-to-br from-lime-50 via-emerald-50 to-amber-50 text-gray-800 font-sans">
 
-<!-- Header -->
-<div class="bg-gradient-to-r from-green-300 to-green-100 text-center text-sm py-2 uppercase tracking-widest shadow font-semibold">
-  Shop Our Newest Collection on Etsy
-</div>
-
-<!-- Navbar -->
-<nav class="flex justify-between items-center px-6 py-4 bg-white/80 backdrop-blur shadow-md sticky top-0 z-40">
-  <div class="space-x-4">
-    <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 font-medium">Tentang</a>
-    <a href="kontak.html" class="text-sm text-gray-700 hover:text-green-700 font-medium">Kontak</a>
+  <!-- Header -->
+  <div class="bg-gradient-to-r from-emerald-600 via-lime-500 to-amber-400 text-white text-center text-sm py-2 uppercase tracking-widest shadow font-semibold">
+    Shop Our Newest Collection on Etsy
   </div>
-  <div>
-    <a href="https://www.instagram.com/official_greendays" target="_blank">
-      <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" class="w-5 hover:scale-110 transition-transform"/>
-    </a>
-  </div>
-</nav>
 
-<!-- Hero -->
-<section class="text-center py-24 bg-gradient-to-b from-white to-green-50">
-  <p class="uppercase text-sm text-green-600 font-semibold mb-2 tracking-widest">Calm Green Day</p>
-  <img src="https://img.icons8.com/ios/100/leaf.png" class="w-20 mx-auto animate-pulse mb-4" />
-  <h1 class="text-5xl font-extrabold tracking-wide text-gray-900 drop-shadow-sm">GREEN DAY</h1>
-</section>
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 bg-white/70 backdrop-blur-md shadow-md sticky top-0 z-40">
+    <div class="space-x-4">
+      <a href="tentang.html" class="text-sm text-gray-700 hover:text-emerald-600 font-medium">Tentang</a>
+      <a href="kontak.html" class="text-sm text-gray-700 hover:text-emerald-600 font-medium">Kontak</a>
+    </div>
+    <div>
+      <a href="https://www.instagram.com/official_greendays" target="_blank">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" class="w-5 hover:scale-110 transition-transform"/>
+      </a>
+    </div>
+  </nav>
 
-<!-- Best Sellers -->
-<section class="bg-green-50 py-20 px-6 text-center">
-  <h2 class="text-2xl font-bold text-gray-800 mb-10">Best Sellers</h2>
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
-    <div onclick="openModal('Boxy Hoodie Brown', 'img/h1.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
-      <img src="img/h1.jpeg" class="rounded-xl mb-2" />
-      <p class="font-semibold text-gray-800">Boxy Hoodie Brown</p>
-    </div>
-    <div onclick="openModal('Kaos Boxy Oversize', 'img/kaos.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
-      <img src="img/kaos.jpeg" class="rounded-xl mb-2" />
-      <p class="font-semibold text-gray-800">Kaos Boxy Oversize</p>
-    </div>
-    <div onclick="openModal('H1 Baggy Rusted Bronze', 'img/clna.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
-      <img src="img/clna.jpeg" class="rounded-xl mb-2" />
-      <p class="font-semibold text-gray-800">H1 Baggy Rusted Bronze</p>
-    </div>
-    <div onclick="openModal('Boxy Hoodie Black', 'img/h2.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
-      <img src="img/h2.jpeg" class="rounded-xl mb-2" />
-      <p class="font-semibold text-gray-800">Boxy Hoodie Black</p>
-    </div>
-  </div>
-  <button onclick="location.href='produk.html'" class="mt-10 px-8 py-3 bg-green-700 text-white rounded-full hover:bg-green-800 transition font-semibold">
-    Lihat Semua Produk
-  </button>
-</section>
+  <!-- Hero -->
+  <section class="text-center py-24 bg-gradient-to-b from-emerald-100 via-lime-50 to-amber-100">
+    <p class="uppercase text-sm text-amber-600 font-semibold mb-2 tracking-widest">Calm Green Day</p>
+    <img src="https://img.icons8.com/ios/100/leaf.png" class="w-20 mx-auto animate-pulse mb-4" />
+    <h1 class="text-5xl font-extrabold tracking-wide text-gray-900 drop-shadow-sm">GREEN DAY</h1>
+  </section>
 
-<!-- Modal Popup Deskripsi -->
-<div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-  <div class="bg-white max-w-lg w-full rounded-xl shadow-lg overflow-y-auto max-h-[90vh] relative">
-    <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-600 hover:text-black text-xl font-bold">
-      &times;
+  <!-- Best Sellers -->
+  <section class="bg-gradient-to-r from-amber-50 via-lime-50 to-emerald-50 py-20 px-6 text-center">
+    <h2 class="text-2xl font-bold text-gray-800 mb-10">Best Sellers</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
+      <div onclick="openModal('Boxy Hoodie Brown', 'img/h1.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
+        <img src="img/h1.jpeg" class="rounded-xl mb-2" />
+        <p class="font-semibold text-gray-800">Boxy Hoodie Brown</p>
+      </div>
+      <div onclick="openModal('Kaos Boxy Oversize', 'img/kaos.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
+        <img src="img/kaos.jpeg" class="rounded-xl mb-2" />
+        <p class="font-semibold text-gray-800">Kaos Boxy Oversize</p>
+      </div>
+      <div onclick="openModal('H1 Baggy Rusted Bronze', 'img/clna.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
+        <img src="img/clna.jpeg" class="rounded-xl mb-2" />
+        <p class="font-semibold text-gray-800">H1 Baggy Rusted Bronze</p>
+      </div>
+      <div onclick="openModal('Boxy Hoodie Black', 'img/h2.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
+        <img src="img/h2.jpeg" class="rounded-xl mb-2" />
+        <p class="font-semibold text-gray-800">Boxy Hoodie Black</p>
+      </div>
+    </div>
+    <button onclick="location.href='produk.html'" class="mt-10 px-8 py-3 bg-emerald-700 text-white rounded-full hover:bg-emerald-800 transition font-semibold">
+      Lihat Semua Produk
     </button>
-    <div class="p-5 space-y-4">
-      <h2 id="modalTitle" class="text-lg font-bold border-b pb-2">Judul Produk</h2>
-      <img id="modalImage" src="" alt="Produk" class="rounded-md w-full object-contain" />
-      <table class="w-full mt-4 text-sm text-left border border-gray-300">
-        <thead class="bg-gray-100">
-          <tr>
-            <th class="border px-3 py-2">Size</th>
-            <th class="border px-3 py-2">Panjang</th>
-            <th class="border px-3 py-2">Lebar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="border px-3 py-2">M</td><td class="border px-3 py-2">70</td><td class="border px-3 py-2">50</td></tr>
-          <tr><td class="border px-3 py-2">L</td><td class="border px-3 py-2">72</td><td class="border px-3 py-2">52</td></tr>
-          <tr><td class="border px-3 py-2">XL</td><td class="border px-3 py-2">74</td><td class="border px-3 py-2">54</td></tr>
-          <tr><td class="border px-3 py-2">XXL</td><td class="border px-3 py-2">76</td><td class="border px-3 py-2">56</td></tr>
-        </tbody>
-      </table>
-      <h2 class="text-lg font-bold pt-6 border-b pb-2">Deskripsi</h2>
-      <p>
-        Produk <strong id="descTitle">Green Day</strong> dirancang dengan bahan berkualitas tinggi dan desain minimalis modern.
-      </p>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>Bahan fleece/katun premium</li>
-        <li>Nyaman digunakan harian</li>
-        <li>Desain simple namun trendi</li>
-      </ul>
+  </section>
+
+  <!-- Modal Popup Deskripsi -->
+  <div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white max-w-lg w-full rounded-xl shadow-lg overflow-y-auto max-h-[90vh] relative">
+      <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-600 hover:text-black text-xl font-bold">&times;</button>
+      <div class="p-5 space-y-4">
+        <h2 id="modalTitle" class="text-lg font-bold border-b pb-2">Judul Produk</h2>
+        <img id="modalImage" src="" alt="Produk" class="rounded-md w-full object-contain" />
+        <table id="sizeTable" class="w-full mt-4 text-sm text-left border border-gray-300 hidden">
+          <thead class="bg-gray-100">
+            <tr id="sizeHeaderRow"></tr>
+          </thead>
+          <tbody id="sizeBody"></tbody>
+        </table>
+        <h2 class="text-lg font-bold pt-6 border-b pb-2">Deskripsi</h2>
+        <p id="modalDescription">
+          Produk Green Day dirancang dengan bahan berkualitas tinggi dan desain minimalis modern.
+        </p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Bahan premium</li>
+          <li>Nyaman digunakan harian</li>
+          <li>Desain simple namun trendi</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Philosophy -->
-<section class="flex flex-col md:flex-row items-center justify-center gap-12 px-6 py-24 bg-gray-100" data-aos="fade-up">
-  <div class="max-w-md text-left">
-    <h3 class="text-2xl font-bold mb-4 text-gray-800">Our Philosophy</h3>
-    <p class="text-gray-600 leading-relaxed">
-      In the context of fashion philosophy, the hoodie can be seen as a symbol of rebellion or rejection of social norms or conventions, which is often related to individual freedom and self-expression.
-    </p>
-  </div>
-  <img src="img/ph.png" class="rounded-2xl w-64 shadow-xl" />
-</section>
+  <!-- Filosofi -->
+  <section class="flex flex-col md:flex-row items-center justify-center gap-12 px-6 py-24 bg-gradient-to-br from-emerald-50 via-white to-amber-50">
+    <div class="max-w-md text-left">
+      <h3 class="text-2xl font-bold mb-4 text-emerald-700">Our Philosophy</h3>
+      <p class="text-gray-600 leading-relaxed">
+        In the context of fashion philosophy, the hoodie can be seen as a symbol of rebellion or rejection of social norms or conventions.
+      </p>
+    </div>
+    <img src="img/ph.png" class="rounded-2xl w-64 shadow-xl" />
+  </section>
 
 <!-- Footer -->
 <footer class="bg-gray-900 text-white text-sm pt-12 pb-6 px-6">
@@ -150,27 +135,111 @@
   </div>
 </footer>
 
-<!-- Floating Nav -->
-<div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
-  <div class="bg-white/90 backdrop-blur shadow-lg rounded-full flex space-x-6 px-8 py-3 border">
-    <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 font-semibold">Tentang</a>
-    <a href="produk.html" class="text-sm text-gray-700 hover:text-green-700 font-semibold">Produk</a>
-    <a href="kontak.html" class="text-sm text-gray-700 hover:text-green-700 font-semibold">Kontak</a>
+  <!-- Floating nav -->
+  <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+    <div class="bg-white/80 backdrop-blur-md shadow-xl rounded-full flex space-x-6 px-8 py-3 border border-emerald-200">
+      <a href="tentang.html" class="text-sm text-gray-700 hover:text-emerald-700 font-semibold">Tentang</a>
+      <a href="produk.html" class="text-sm text-gray-700 hover:text-emerald-700 font-semibold">Produk</a>
+      <a href="kontak.html" class="text-sm text-gray-700 hover:text-emerald-700 font-semibold">Kontak</a>
+    </div>
   </div>
-</div>
 
-<script>
-  function openModal(title, imgSrc) {
-    document.getElementById("popupModal").classList.remove("hidden");
-    document.getElementById("modalTitle").innerText = title;
-    document.getElementById("descTitle").innerText = title;
-    document.getElementById("modalImage").src = imgSrc;
-  }
+  <script>
+    // Data ukuran tiap produk (header dan isi tabel)
+    const products = {
+      "Boxy Hoodie Brown": {
+        sizes: ["Size", "Panjang", "Lebar", "Lengan"],
+        values: [
+          ["M", "70", "50", "60"],
+          ["L", "72", "52", "62"],
+          ["XL", "74", "54", "64"],
+          ["XXL", "76", "56", "66"],
+        ],
+        description: "Hoodie bahan fleece premium, nyaman dan hangat untuk sehari-hari."
+      },
+      "Kaos Boxy Oversize": {
+        sizes: ["Size", "Panjang", "Lebar"],
+        values: [
+          ["S", "65", "48"],
+          ["M", "67", "50"],
+          ["L", "69", "52"],
+          ["XL", "71", "54"],
+        ],
+        description: "Kaos katun ringan dengan desain oversize yang trendi dan nyaman."
+      },
+      "H1 Baggy Rusted Bronze": {
+        sizes: ["Size", "Panjang", "Lingkar Pinggang", "Lebar Kaki"],
+        values: [
+          ["28", "100", "76", "24"],
+          ["30", "102", "80", "25"],
+          ["32", "104", "84", "26"],
+          ["34", "106", "88", "27"],
+        ],
+        description: "Celana baggy dengan bahan denim kuat, cocok untuk gaya kasual."
+      },
+      "Boxy Hoodie Black": {
+        sizes: ["Size", "Panjang", "Lebar", "Lengan"],
+        values: [
+          ["M", "71", "51", "61"],
+          ["L", "73", "53", "63"],
+          ["XL", "75", "55", "65"],
+          ["XXL", "77", "57", "67"],
+        ],
+        description: "Hoodie hitam dengan bahan lembut dan desain minimalis."
+      }
+    };
 
-  function closeModal() {
-    document.getElementById("popupModal").classList.add("hidden");
-  }
-</script>
+    function openModal(title, imgSrc) {
+      document.getElementById("modalTitle").innerText = title;
+      document.getElementById("modalImage").src = imgSrc;
+
+      // Isi deskripsi
+      const descEl = document.getElementById("modalDescription");
+      descEl.innerText = products[title]?.description || "Produk Green Day dirancang dengan bahan berkualitas tinggi dan desain minimalis modern.";
+
+      // Isi tabel ukuran
+      const sizeTable = document.getElementById("sizeTable");
+      const sizeHeaderRow = document.getElementById("sizeHeaderRow");
+      const sizeBody = document.getElementById("sizeBody");
+
+      if(products[title]) {
+        sizeTable.classList.remove("hidden");
+
+        // Clear header & body
+        sizeHeaderRow.innerHTML = "";
+        sizeBody.innerHTML = "";
+
+        // Buat header
+        products[title].sizes.forEach(headerText => {
+          const th = document.createElement("th");
+          th.className = "border px-3 py-2";
+          th.innerText = headerText;
+          sizeHeaderRow.appendChild(th);
+        });
+
+        // Buat isi tabel
+        products[title].values.forEach(row => {
+          const tr = document.createElement("tr");
+          row.forEach(cell => {
+            const td = document.createElement("td");
+            td.className = "border px-3 py-2";
+            td.innerText = cell;
+            tr.appendChild(td);
+          });
+          sizeBody.appendChild(tr);
+        });
+
+      } else {
+        sizeTable.classList.add("hidden");
+      }
+
+      document.getElementById("popupModal").classList.remove("hidden");
+    }
+
+    function closeModal() {
+      document.getElementById("popupModal").classList.add("hidden");
+    }
+  </script>
 
 </body>
 </html>
