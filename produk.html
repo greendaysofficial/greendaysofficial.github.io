@@ -1,215 +1,297 @@
-<!DOCTYPE html><html lang="id"><head>
+<!DOCTYPE html>
+<html lang="id">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Semua Produk | Green Day</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produk Green Day</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }.popup {
-  animation: fadeInUp 0.4s ease;
-}
+</head>
+<body class="bg-gradient-to-br from-lime-50 via-emerald-50 to-amber-50 text-gray-800 font-sans">
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.filter-btn.active {
-  background-color: #4ade80;
-  color: white;
-}
-
-#review-list {
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-  </style>
-</head><body class="bg-gray-50 text-gray-800 font-sans">
   <!-- Header -->
-  <header class="bg-gradient-to-r from-green-300 to-green-100 text-center text-sm py-2 uppercase tracking-widest shadow font-semibold">
-    Temukan Gaya Terbaikmu di Koleksi Green Day
-  </header>  <!-- Navbar -->  <nav class="flex justify-between items-center px-6 py-4 bg-white/80 backdrop-blur shadow-md sticky top-0 z-40">
+  <div class="bg-gradient-to-r from-emerald-600 via-lime-500 to-amber-400 text-white text-center text-sm py-2 uppercase tracking-widest shadow font-semibold">
+    Koleksi Produk Green Day Terbaru
+  </div>
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 bg-white/70 backdrop-blur-md shadow-md sticky top-0 z-40">
     <div class="space-x-4">
-      <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 transition font-medium">Tentang</a>
-      <a href="kontak.html" class="text-sm text-gray-700 hover:text-green-700 transition font-medium">Kontak</a>
+      <a href="tentang.html" class="text-sm text-gray-700 hover:text-emerald-600 font-medium">Tentang</a>
+      <a href="kontak.html" class="text-sm text-gray-700 hover:text-emerald-600 font-medium">Kontak</a>
     </div>
-    <div class="flex gap-4">
+    <div>
       <a href="https://www.instagram.com/official_greendays" target="_blank">
-        <img class="w-5 hover:scale-110 transition-transform" src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" />
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" class="w-5 hover:scale-110 transition-transform"/>
       </a>
     </div>
-  </nav>  <!-- Judul -->  <section class="text-center py-20 bg-gradient-to-b from-white to-green-50" data-aos="fade-up">
-    <h1 class="text-4xl font-extrabold tracking-wide text-gray-900 drop-shadow-sm">Semua Produk</h1>
-    <p class="text-gray-600 mt-2">Pilih kategori favoritmu di bawah ini</p>
-  </section>  <!-- Filter Kategori -->  <div class="flex justify-center gap-4 flex-wrap px-4 mb-12" data-aos="fade-up">
-    <button class="filter-btn px-4 py-2 bg-white shadow rounded-full hover:bg-green-100 transition" onclick="filterCategory('all')">
-      <img src="https://img.icons8.com/ios/24/shopping-bag.png" class="inline w-5 mr-2"> Semua
-    </button>
-    <button class="filter-btn px-4 py-2 bg-white shadow rounded-full hover:bg-green-100 transition" onclick="filterCategory('baju')">
-      <img src="https://img.icons8.com/ios/24/t-shirt.png" class="inline w-5 mr-2"> Baju
-    </button>
-    <button class="filter-btn px-4 py-2 bg-white shadow rounded-full hover:bg-green-100 transition" onclick="filterCategory('jeans')">
-      <img src="https://img.icons8.com/ios/24/denim.png" class="inline w-5 mr-2"> Jeans
-    </button>
-    <button class="filter-btn px-4 py-2 bg-white shadow rounded-full hover:bg-green-100 transition" onclick="filterCategory('hoodie')">
-      <img src="https://img.icons8.com/ios/24/hoodie.png" class="inline w-5 mr-2"> Hoodie
-    </button>
-  </div>  <!-- Grid Produk -->  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-6" id="productGrid" data-aos="fade-up"></div>  <!-- Popup Produk -->  <div id="popup" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
-    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-6 relative popup">
-      <button onclick="closePopup()" class="absolute top-3 right-3 text-gray-500 hover:text-red-500">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <img id="popup-img" class="rounded-xl w-full mb-4" />
-      <h2 id="popup-title" class="text-2xl font-bold mb-2"></h2>
-      <p id="popup-desc" class="text-gray-600 mb-4"></p>
-      <div class="mb-4">
-        <label class="block text-sm font-semibold mb-1">Username:</label>
-        <input id="username" class="w-full border px-3 py-2 rounded-md" placeholder="Masukkan nama kamu...">
-      </div>
-      <div class="mb-4">
-        <label class="block text-sm font-semibold mb-1">Ulasan & Rating:</label>
-        <textarea id="review" class="w-full border px-3 py-2 rounded-md mb-2" placeholder="Tulis ulasanmu..."></textarea>
-        <button onclick="addReview()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Kirim Ulasan</button>
-      </div>
-      <div class="mb-4">
-        <h3 class="font-semibold mb-1">Ulasan Produk:</h3>
-        <div id="review-list" class="border p-2 rounded-md bg-gray-50 space-y-2 text-sm"></div>
-      </div>
-      <a id="wa-btn" target="_blank" class="inline-block mt-2 bg-green-500 text-white font-semibold px-4 py-2 rounded hover:bg-green-600 transition-all">Pesan via WhatsApp</a>
+  </nav>
+  
+    <!-- Hero -->
+  <section class="text-center py-24 bg-gradient-to-b from-emerald-100 via-lime-50 to-amber-100">
+    <p class="uppercase text-sm text-amber-600 font-semibold mb-2 tracking-widest">Calm Green Day</p>
+    <img src="https://img.icons8.com/ios/100/leaf.png" class="w-20 mx-auto animate-pulse mb-4" />
+    <h1 class="text-5xl font-extrabold tracking-wide text-gray-900 drop-shadow-sm">GREEN DAY</h1>
+  </section>
+
+  <!-- Filter Produk -->
+  <section class="bg-gradient-to-r from-amber-50 via-lime-50 to-emerald-50 py-10 px-6 text-center max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Pilih Kategori Produk</h2>
+    <div id="filterButtons" class="flex flex-wrap justify-center gap-4">
+      <!-- Tombol filter akan di-generate JS -->
     </div>
-  </div>  <!-- Footer -->  <footer class="bg-green-100 text-gray-700 mt-20">
-    <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+  </section>
+
+  <!-- Produk -->
+  <section class="bg-gradient-to-r from-amber-50 via-lime-50 to-emerald-50 py-10 px-6 text-center max-w-7xl mx-auto">
+    <div id="produkGrid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-8 justify-items-center">
+      <!-- Produk akan di-generate via JS -->
+    </div>
+  </section>
+
+  <!-- Modal Popup Deskripsi -->
+  <div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white max-w-lg w-full rounded-xl shadow-lg overflow-y-auto max-h-[90vh] relative">
+      <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-600 hover:text-black text-xl font-bold">&times;</button>
+      <div class="p-5 space-y-4">
+        <h2 id="modalTitle" class="text-lg font-bold border-b pb-2">Judul Produk</h2>
+        <img id="modalImage" src="" alt="Produk" class="rounded-md w-full object-contain" />
+        <table id="sizeTable" class="w-full mt-4 text-sm text-left border border-gray-300 hidden">
+          <thead class="bg-gray-100">
+            <tr id="sizeHeaderRow"></tr>
+          </thead>
+          <tbody id="sizeBody"></tbody>
+        </table>
+        <h2 class="text-lg font-bold pt-6 border-b pb-2">Deskripsi</h2>
+        <p id="modalDescription" class="whitespace-pre-line"></p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Bahan premium</li>
+          <li>Nyaman digunakan harian</li>
+          <li>Desain simple namun trendi</li>
+        </ul>
+        <a id="whatsappButton" target="_blank" 
+          class="mt-6 inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full transition"
+          href="#">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png"/>
+          Pesan via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+  
+<!-- Footer -->
+<footer class="bg-gray-900 text-white text-sm pt-12 pb-6 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
       <div>
-        <h4 class="font-bold text-lg mb-2">Green Day</h4>
-        <p class="text-sm">Brand fashion lokal yang mengutamakan kualitas dan gaya.</p>
+        <h4 class="font-bold text-lg mb-4">Tentang Kami</h4>
+        <p class="text-gray-400">Green Day adalah brand fashion yang menghadirkan kenyamanan dan gaya dalam satu kesatuan.</p>
       </div>
       <div>
-        <h4 class="font-bold text-lg mb-2">Navigasi</h4>
-        <ul class="text-sm space-y-1">
-          <li><a href="index.html" class="hover:text-green-600">Beranda</a></li>
-          <li><a href="produk.html" class="hover:text-green-600">Produk</a></li>
-          <li><a href="tentang.html" class="hover:text-green-600">Tentang</a></li>
-          <li><a href="kontak.html" class="hover:text-green-600">Kontak</a></li>
+        <h4 class="font-bold text-lg mb-4">Navigasi</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="footer-link text-gray-300">Beranda</a></li>
+          <li><a href="tentang.html" class="footer-link text-gray-300">Tentang</a></li>
+          <li><a href="kontak.html" class="footer-link text-gray-300">Kontak</a></li>
+          <li><a href="produk.html" class="footer-link text-gray-300">Produk</a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="font-bold text-lg mb-2">Kontak</h4>
-        <p class="text-sm">Email: greenday@example.com</p>
-        <p class="text-sm">WhatsApp: +62 812-3456-7890</p>
-      </div>
-      <div>
-        <h4 class="font-bold text-lg mb-2">Sosial Media</h4>
-        <div class="flex gap-3">
-          <a href="#"><img class="w-5" src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" /></a>
-        </div>
+    </div>
+    <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400 text-xs">&copy; 2025 Green Day. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="https://www.instagram.com/official_greendays" target="_blank">
+          <img src="https://img.icons8.com/ios-glyphs/24/ffffff/instagram-new.png" />
+        </a>
+        <a href="https://wa.me/6285876125581" target="_blank">
+          <img src="https://img.icons8.com/ios-glyphs/24/ffffff/whatsapp.png" />
+        </a>
       </div>
     </div>
-    <div class="bg-green-200 text-center py-4 text-sm font-medium">&copy; 2025 Green Day. All rights reserved.</div>
-  </footer>  <script>
-    AOS.init();
+  </div>
+</footer>
 
-    let currentProduct = "";
-    let reviews = JSON.parse(localStorage.getItem("reviews") || "{}");
-    const adminUsername = "admin_aufa";
+  <!-- Floating nav -->
+  <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+    <div class="bg-white/80 backdrop-blur-md shadow-xl rounded-full flex space-x-6 px-8 py-3 border border-emerald-200">
+      <a href="tentang.html" class="text-sm text-gray-700 hover:text-emerald-700 font-semibold">Tentang</a>
+      <a href="produk.html" class="text-sm text-gray-700 hover:text-emerald-700 font-semibold">Produk</a>
+      <a href="kontak.html" class="text-sm text-gray-700 hover:text-emerald-700 font-semibold">Kontak</a>
+      <a href="index.html" class="text-sm text-gray-700 hover:text-emerald-700 font-semibold">Home</a>
+    </div>
+  </div>
 
-    const productGrid = document.getElementById("productGrid");
+<script>
+  const whatsappNumber = "6285876125581";
 
-    const products = [
-      { title: "Kaos Oversize Hitam", category: "baju", desc: "Kaos oversized berbahan katun combed, adem dan nyaman.", price: "Rp. 150.000", img: "https://via.placeholder.com/300" },
-      { title: "Kaos Putih Polos", category: "baju", desc: "Cocok dipadukan dengan outfit apa saja.", price: "Rp. 140.000", img: "https://via.placeholder.com/300" },
-      { title: "Boxy Hoodie Grey", category: "hoodie", desc: "Hoodie unisex berbahan fleece, cocok untuk hangout.", price: "Rp. 250.000", img: "https://via.placeholder.com/300" },
-      { title: "Hoodie Coklat Cream", category: "hoodie", desc: "Warna kalem dengan desain minimalis.", price: "Rp. 265.000", img: "https://via.placeholder.com/300" },
-      { title: "Celana Jeans Slim Fit", category: "jeans", desc: "Jeans warna biru gelap, cocok dipadukan dengan outfit apapun.", price: "Rp. 275.000", img: "https://ibb.co.com/DfHSLf2G" },
-      { title: "Jeans Robek Trendy", category: "jeans", desc: "Gaya kasual kekinian.", price: "Rp. 285.000", img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.instagram.com%2Fusedlocalitem%2Fp%2FDHnu80Qh5YX%2F&psig=AOvVaw1ln-M3m81AZjBQfa19E806&ust=1745890943720000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOi3r9_M-YwDFQAAAAAdAAAAABAE" },
-      // Tambahkan hingga masing-masing kategori ada 8 produk...
-    ];
+  const products = {
+    "Boxy Hoodie Brown": {
+      img: "img/h1.jpeg",
+      category: "Hoodie",
+      sizes: ["Size", "Panjang", "Lebar", "Lengan"],
+      values: [["M","70","50","60"],["L","72","52","62"],["XL","74","54","64"],["XXL","76","56","66"]],
+      description: "Hoodie bahan fleece premium, nyaman dan hangat untuk sehari-hari."
+    },
+    "Kaos Boxy Oversize": {
+      img: "img/kaos.jpeg",
+      category: "Kaos",
+      sizes: ["Size", "Panjang", "Lebar"],
+      values: [["S","65","48"],["M","67","50"],["L","69","52"],["XL","71","54"]],
+      description: "Kaos katun ringan dengan desain oversize yang trendi dan nyaman."
+    },
+    "H1 Baggy Rusted Bronze": {
+      img: "img/clna.jpeg",
+      category: "Celana",
+      sizes: ["Size", "Panjang", "Lingkar Pinggang", "Lebar Kaki"],
+      values: [["28","100","76","24"],["30","102","80","25"],["32","104","84","26"],["34","106","88","27"]],
+      description: "Celana baggy dengan bahan denim kuat, cocok untuk gaya kasual."
+    },
+    "Boxy Hoodie Black": {
+      img: "img/h2.jpeg",
+      category: "Hoodie",
+      sizes: ["Size", "Panjang", "Lebar", "Lengan"],
+      values: [["M","71","51","61"],["L","73","53","63"],["XL","75","55","65"],["XXL","77","57","67"]],
+      description: "Hoodie hitam dengan bahan lembut dan desain minimalis."
+    },
+    "Sweater Vintage Olive": {
+      img: "img/sweater1.jpeg",
+      category: "Sweater",
+      sizes: ["Size", "Panjang", "Lebar", "Lengan"],
+      values: [["S","68","49","58"],["M","70","51","59"],["L","72","53","60"],["XL","74","55","61"]],
+      description: "Sweater vintage dengan warna olive yang elegan dan nyaman dipakai."
+    },
+    "Jaket Denim Classic": {
+      img: "img/jaket1.jpeg",
+      category: "Jaket",
+      sizes: ["Size", "Panjang", "Lebar", "Lengan"],
+      values: [["M","69","50","60"],["L","71","52","61"],["XL","73","54","62"]],
+      description: "Jaket denim klasik yang tahan lama dengan desain timeless."
+    },
+    "Celana Cargo Army": {
+      img: "img/cargo1.jpeg",
+      category: "Celana",
+      sizes: ["Size", "Panjang", "Lingkar Pinggang", "Lebar Kaki"],
+      values: [["28","102","78","26"],["30","104","82","27"],["32","106","86","28"]],
+      description: "Celana cargo bergaya army yang fungsional dan stylish."
+    }
+  };
 
-    products.forEach(p => {
-      const card = document.createElement("div");
-      card.className = `product-card ${p.category} bg-white rounded-xl shadow hover:shadow-2xl p-4 transition-transform hover:-translate-y-2 cursor-pointer`;
-      card.onclick = () => showPopup(p);
-      card.innerHTML = `
-        <img src="${p.img}" class="rounded-xl mb-3" />
-        <h3 class="font-semibold text-gray-800">${p.title}</h3>
-        <p class="text-sm text-gray-500">${p.price}</p>
-      `;
-      productGrid.appendChild(card);
+  const categories = ["Semua", ...new Set(Object.values(products).map(p => p.category))];
+  const filterButtonsContainer = document.getElementById("filterButtons");
+  const produkGrid = document.getElementById("produkGrid");
+
+  categories.forEach(cat => {
+    const btn = document.createElement("button");
+    btn.innerText = cat;
+    btn.className = "px-4 py-2 rounded-full font-medium border border-emerald-600 text-emerald-600 bg-white hover:bg-emerald-100 hover:text-emerald-800 transition-all duration-200 shadow-sm";
+    btn.onclick = () => {
+      setActiveFilter(cat);
+      showProducts(cat);
+    };
+    filterButtonsContainer.appendChild(btn);
+  });
+
+  function setActiveFilter(selected) {
+    Array.from(filterButtonsContainer.children).forEach(btn => {
+      if (btn.innerText === selected) {
+        btn.classList.add("bg-emerald-600", "text-white");
+        btn.classList.remove("bg-white", "text-emerald-600");
+      } else {
+        btn.classList.remove("bg-emerald-600", "text-white");
+        btn.classList.add("bg-white", "text-emerald-600");
+      }
     });
+  }
 
-    function filterCategory(category) {
-      const cards = document.querySelectorAll('.product-card');
-      const buttons = document.querySelectorAll('.filter-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-      cards.forEach(card => {
-        card.style.display = category === 'all' || card.classList.contains(category) ? 'block' : 'none';
+  function showProducts(category) {
+    produkGrid.innerHTML = "";
+    let filteredProducts = category === "Semua" ? products :
+      Object.fromEntries(Object.entries(products).filter(([_, p]) => p.category === category));
+
+    for (const [title, data] of Object.entries(filteredProducts)) {
+      const produkDiv = document.createElement("div");
+      produkDiv.className = "cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white";
+      produkDiv.onclick = () => openModal(title);
+      produkDiv.innerHTML = `
+        <img src="${data.img}" alt="${title}" class="rounded-xl mb-2" />
+        <p class="font-semibold text-gray-800">${title}</p>
+      `;
+      produkGrid.appendChild(produkDiv);
+    }
+  }
+
+  function openModal(title) {
+    const data = products[title];
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalImage").src = data.img;
+    document.getElementById("modalDescription").innerText = data.description;
+
+    const sizeTable = document.getElementById("sizeTable");
+    const sizeHeaderRow = document.getElementById("sizeHeaderRow");
+    const sizeBody = document.getElementById("sizeBody");
+
+    if (data.sizes && data.values) {
+      sizeTable.classList.remove("hidden");
+      sizeHeaderRow.innerHTML = "";
+      sizeBody.innerHTML = "";
+
+      data.sizes.forEach(header => {
+        const th = document.createElement("th");
+        th.className = "border px-3 py-2";
+        th.innerText = header;
+        sizeHeaderRow.appendChild(th);
       });
-    }
 
-    function showPopup(product) {
-      currentProduct = product.title;
-      document.getElementById("popup-title").innerText = product.title;
-      document.getElementById("popup-desc").innerText = product.desc;
-      document.getElementById("popup-img").src = product.img;
-      document.getElementById("popup").classList.remove("hidden");
-      document.getElementById("wa-btn").href = `https://wa.me/6285876125581?text=Halo%20Green%20Day%2C%20saya%20tertarik%20dengan%20produk%20${encodeURIComponent(product.title)}.%20Boleh%20minta%20detail%20lebih%20lanjutnya%3F`;
-      loadReviews();
-    }
-
-    function closePopup() {
-      document.getElementById("popup").classList.add("hidden");
-    }
-
-    function addReview() {
-      const user = document.getElementById("username").value.trim();
-      const text = document.getElementById("review").value.trim();
-      if (!user || !text) return alert("Isi username dan ulasan dulu ya!");
-      if (!reviews[currentProduct]) reviews[currentProduct] = [];
-      reviews[currentProduct].push({ user, text });
-      localStorage.setItem("reviews", JSON.stringify(reviews));
-      document.getElementById("review").value = "";
-      loadReviews();
-    }
-
-    function deleteReview(index) {
-      const user = document.getElementById("username").value.trim();
-      if (user !== adminUsername) return alert("Hanya admin yang bisa menghapus ulasan!");
-      reviews[currentProduct].splice(index, 1);
-      localStorage.setItem("reviews", JSON.stringify(reviews));
-      loadReviews();
-    }
-
-    function loadReviews() {
-      const list = document.getElementById("review-list");
-      list.innerHTML = "";
-      (reviews[currentProduct] || []).forEach((r, i) => {
-        const item = document.createElement("div");
-        item.className = "flex justify-between items-start bg-white p-2 rounded shadow-sm";
-        item.innerHTML = `<div><strong>${r.user}</strong><br>${r.text}</div>`;
-        const user = document.getElementById("username").value.trim();
-        if (user === adminUsername) {
-          const del = document.createElement("button");
-          del.textContent = "Hapus";
-          del.className = "text-red-500 text-xs ml-4 hover:underline";
-          del.onclick = () => deleteReview(i);
-          item.appendChild(del);
-        }
-        list.appendChild(item);
+      data.values.forEach(row => {
+        const tr = document.createElement("tr");
+        row.forEach(cell => {
+          const td = document.createElement("td");
+          td.className = "border px-3 py-2";
+          td.innerText = cell;
+          tr.appendChild(td);
+        });
+        sizeBody.appendChild(tr);
       });
+    } else {
+      sizeTable.classList.add("hidden");
     }
 
-    document.addEventListener("DOMContentLoaded", () => filterCategory("all"));
-  </script></body></html>
+    const pesanWA = `Halo Tim Green Day,
+
+Saya berminat memesan produk berikut:
+
+*Nama Produk:* ${title}
+*Deskripsi:* ${data.description}
+*Ukuran:* Mohon informasikan ukuran yang tersedia.
+
+Mohon informasi terkait:
+- Ketersediaan stok
+- Harga produk
+- Cara pembayaran dan pengiriman
+
+Berikut data saya untuk proses pemesanan:
+*Nama:* [Isi Nama Anda]
+*Alamat:* [Isi Alamat Lengkap]
+*Nomor Telepon:* [Isi Nomor Telepon]
+
+Terima kasih atas bantuannya.
+
+Salam hormat,
+[Isi Nama Anda]`;
+
+    const waButton = document.getElementById("whatsappButton");
+    waButton.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(pesanWA)}`;
+
+    document.getElementById("popupModal").classList.remove("hidden");
+  }
+
+  function closeModal() {
+    document.getElementById("popupModal").classList.add("hidden");
+  }
+
+  // Init
+  setActiveFilter("Semua");
+  showProducts("Semua");
+</script>
+
+</body>
+</html>
