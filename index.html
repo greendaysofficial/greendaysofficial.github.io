@@ -5,23 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Green Day</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .footer-link:hover {
-      color: #4ade80;
-    }
-    .popup {
-      transition: opacity 0.3s ease;
-    }
+    html { scroll-behavior: smooth; }
+    .footer-link:hover { color: #4ade80; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 relative pb-24 font-sans">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-<!-- Header Announcement -->
+<!-- Header -->
 <div class="bg-gradient-to-r from-green-300 to-green-100 text-center text-sm py-2 uppercase tracking-widest shadow font-semibold">
   Shop Our Newest Collection on Etsy
 </div>
@@ -29,58 +20,83 @@
 <!-- Navbar -->
 <nav class="flex justify-between items-center px-6 py-4 bg-white/80 backdrop-blur shadow-md sticky top-0 z-40">
   <div class="space-x-4">
-    <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 transition font-medium">Tentang</a>
-    <a href="kontak.html" class="text-sm text-gray-700 hover:text-green-700 transition font-medium">Kontak</a>
+    <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 font-medium">Tentang</a>
+    <a href="kontak.html" class="text-sm text-gray-700 hover:text-green-700 font-medium">Kontak</a>
   </div>
-  <div class="flex gap-4">
-    <a href="https://www.instagram.com/official_greendays?igsh=MTQ0dzVvdmdjZTc4aQ==" target="_blank">
-      <img class="w-5 hover:scale-110 transition-transform" src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" />
+  <div>
+    <a href="https://www.instagram.com/official_greendays" target="_blank">
+      <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" class="w-5 hover:scale-110 transition-transform"/>
     </a>
   </div>
 </nav>
 
-<!-- Hero Section -->
-<section class="text-center py-24 bg-gradient-to-b from-white to-green-50" data-aos="fade-up">
-  <p class="uppercase tracking-widest text-sm mb-2 text-green-600 font-semibold">Calm Green Day</p>
-  <img src="https://img.icons8.com/ios/100/leaf.png" class="mx-auto mb-4 w-20 animate-pulse" />
+<!-- Hero -->
+<section class="text-center py-24 bg-gradient-to-b from-white to-green-50">
+  <p class="uppercase text-sm text-green-600 font-semibold mb-2 tracking-widest">Calm Green Day</p>
+  <img src="https://img.icons8.com/ios/100/leaf.png" class="w-20 mx-auto animate-pulse mb-4" />
   <h1 class="text-5xl font-extrabold tracking-wide text-gray-900 drop-shadow-sm">GREEN DAY</h1>
 </section>
 
 <!-- Best Sellers -->
-<section class="bg-white py-20 px-6 text-center" data-aos="fade-up">
-  <h2 class="text-2xl tracking-wide mb-10 font-bold text-gray-800">Best Sellers</h2>
+<section class="bg-green-50 py-20 px-6 text-center">
+  <h2 class="text-2xl font-bold text-gray-800 mb-10">Best Sellers</h2>
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
-    <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Boxy Hoodie Brown', 'Hoodie berbahan fleece tebal, cocok untuk musim hujan.')">
+    <div onclick="openModal('Boxy Hoodie Brown', 'img/h1.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
       <img src="img/h1.jpeg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">Boxy Hoodie Brown</p>
-      <p class="text-sm text-gray-500">Rp. 250.000</p>
     </div>
-    <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Kaos Boxy Oversize', 'Kaos oversize dengan bahan katun premium.')">
+    <div onclick="openModal('Kaos Boxy Oversize', 'img/kaos.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
       <img src="img/kaos.jpeg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">Kaos Boxy Oversize</p>
-      <p class="text-sm text-gray-500">Rp. 110.000</p>
     </div>
-    <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('H1 Baggy Rusted Bronze', 'Celana baggy warna eksklusif untuk gaya urban.')">
+    <div onclick="openModal('H1 Baggy Rusted Bronze', 'img/clna.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
       <img src="img/clna.jpeg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">H1 Baggy Rusted Bronze</p>
-      <p class="text-sm text-gray-500">Rp. 450.000</p>
     </div>
-    <div class="transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl p-2 rounded-xl cursor-pointer" data-aos="zoom-in" onclick="showPopup('Boxy Hoodie Black', 'Hoodie warna hitam elegan dengan potongan boxy.')">
+    <div onclick="openModal('Boxy Hoodie Black', 'img/h2.jpeg')" class="cursor-pointer transition hover:-translate-y-2 hover:shadow-xl p-2 rounded-xl bg-white">
       <img src="img/h2.jpeg" class="rounded-xl mb-2" />
       <p class="font-semibold text-gray-800">Boxy Hoodie Black</p>
-      <p class="text-sm text-gray-500">Rp. 250.000</p>
     </div>
   </div>
- <button onclick="location.href='produk.html'" class="mt-10 px-8 py-3 bg-green-700 text-white rounded-full hover:bg-green-800 transition shadow-md font-semibold">
-  Lihat Semua Produk
-</button>
+  <button onclick="location.href='produk.html'" class="mt-10 px-8 py-3 bg-green-700 text-white rounded-full hover:bg-green-800 transition font-semibold">
+    Lihat Semua Produk
+  </button>
+</section>
 
-<!-- Popup Modal -->
-<div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-  <div class="bg-white p-6 rounded-xl shadow-xl max-w-md w-full popup">
-    <h3 id="popup-title" class="text-xl font-bold mb-2"></h3>
-    <p id="popup-desc" class="text-gray-600 mb-4"></p>
-    <button onclick="closePopup()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Tutup</button>
+<!-- Modal Popup Deskripsi -->
+<div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white max-w-lg w-full rounded-xl shadow-lg overflow-y-auto max-h-[90vh] relative">
+    <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-600 hover:text-black text-xl font-bold">
+      &times;
+    </button>
+    <div class="p-5 space-y-4">
+      <h2 id="modalTitle" class="text-lg font-bold border-b pb-2">Judul Produk</h2>
+      <img id="modalImage" src="" alt="Produk" class="rounded-md w-full object-contain" />
+      <table class="w-full mt-4 text-sm text-left border border-gray-300">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border px-3 py-2">Size</th>
+            <th class="border px-3 py-2">Panjang</th>
+            <th class="border px-3 py-2">Lebar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border px-3 py-2">M</td><td class="border px-3 py-2">70</td><td class="border px-3 py-2">50</td></tr>
+          <tr><td class="border px-3 py-2">L</td><td class="border px-3 py-2">72</td><td class="border px-3 py-2">52</td></tr>
+          <tr><td class="border px-3 py-2">XL</td><td class="border px-3 py-2">74</td><td class="border px-3 py-2">54</td></tr>
+          <tr><td class="border px-3 py-2">XXL</td><td class="border px-3 py-2">76</td><td class="border px-3 py-2">56</td></tr>
+        </tbody>
+      </table>
+      <h2 class="text-lg font-bold pt-6 border-b pb-2">Deskripsi</h2>
+      <p>
+        Produk <strong id="descTitle">Green Day</strong> dirancang dengan bahan berkualitas tinggi dan desain minimalis modern.
+      </p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Bahan fleece/katun premium</li>
+        <li>Nyaman digunakan harian</li>
+        <li>Desain simple namun trendi</li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -96,15 +112,15 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-900 text-white text-sm pt-12 pb-6 px-6" data-aos="fade-up">
+<footer class="bg-gray-900 text-white text-sm pt-12 pb-6 px-6">
   <div class="max-w-6xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
       <div>
-        <h4 class="font-bold text-lg mb-4 text-white">Tentang Kami</h4>
-        <p class="text-gray-400 leading-relaxed">Green Day adalah brand fashion yang menghadirkan kenyamanan dan gaya dalam satu kesatuan. Terima kasih telah mengunjungi website kami.</p>
+        <h4 class="font-bold text-lg mb-4">Tentang Kami</h4>
+        <p class="text-gray-400">Green Day adalah brand fashion yang menghadirkan kenyamanan dan gaya dalam satu kesatuan.</p>
       </div>
       <div>
-        <h4 class="font-bold text-lg mb-4 text-white">Navigasi</h4>
+        <h4 class="font-bold text-lg mb-4">Navigasi</h4>
         <ul class="space-y-2">
           <li><a href="tentang.html" class="footer-link text-gray-300">Tentang</a></li>
           <li><a href="kontak.html" class="footer-link text-gray-300">Kontak</a></li>
@@ -112,10 +128,10 @@
         </ul>
       </div>
       <div>
-        <h4 class="font-bold text-lg mb-4 text-white">Berlangganan</h4>
-        <p class="text-gray-400 mb-3">Masukkan email Anda untuk mendapatkan info produk terbaru:</p>
+        <h4 class="font-bold text-lg mb-4">Berlangganan</h4>
+        <p class="text-gray-400 mb-2">Masukkan email Anda untuk info produk terbaru:</p>
         <div class="flex">
-          <input type="email" placeholder="Email Anda" class="w-full px-3 py-2 rounded-l bg-white text-black" />
+          <input type="email" placeholder="Email Anda" class="w-full px-3 py-2 rounded-l text-black" />
           <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r">Kirim</button>
         </div>
       </div>
@@ -123,10 +139,10 @@
     <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
       <p class="text-gray-400 text-xs">&copy; 2025 Green Day. All rights reserved.</p>
       <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="https://www.instagram.com/official_greendays?igsh=MTQ0dzVvdmdjZTc4aQ==" target="_blank" class="hover:opacity-75">
+        <a href="https://www.instagram.com/official_greendays" target="_blank">
           <img src="https://img.icons8.com/ios-glyphs/24/ffffff/instagram-new.png" />
         </a>
-        <a href="https://wa.me/6285876125581" target="_blank" class="hover:opacity-75">
+        <a href="https://wa.me/6285876125581" target="_blank">
           <img src="https://img.icons8.com/ios-glyphs/24/ffffff/whatsapp.png" />
         </a>
       </div>
@@ -134,24 +150,25 @@
   </div>
 </footer>
 
-<!-- Floating Navigation Button -->
+<!-- Floating Nav -->
 <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
-  <div class="bg-white/90 backdrop-blur shadow-lg rounded-full flex space-x-6 px-8 py-3 border shadow-xl animate-bounce hover:animate-none transition-all duration-500">
-    <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 transition font-semibold">Tentang</a>
-    <a href="produk.html" class="text-sm text-gray-700 hover:text-green-700 transition font-semibold">Produk</a>
-    <a href="kontak.html" class="text-sm text-gray-700 hover:text-green-700 transition font-semibold">Kontak</a>
+  <div class="bg-white/90 backdrop-blur shadow-lg rounded-full flex space-x-6 px-8 py-3 border">
+    <a href="tentang.html" class="text-sm text-gray-700 hover:text-green-700 font-semibold">Tentang</a>
+    <a href="produk.html" class="text-sm text-gray-700 hover:text-green-700 font-semibold">Produk</a>
+    <a href="kontak.html" class="text-sm text-gray-700 hover:text-green-700 font-semibold">Kontak</a>
   </div>
 </div>
 
 <script>
-  AOS.init();
-  function showPopup(title, desc) {
-    document.getElementById('popup-title').innerText = title;
-    document.getElementById('popup-desc').innerText = desc;
-    document.getElementById('popup').classList.remove('hidden');
+  function openModal(title, imgSrc) {
+    document.getElementById("popupModal").classList.remove("hidden");
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("descTitle").innerText = title;
+    document.getElementById("modalImage").src = imgSrc;
   }
-  function closePopup() {
-    document.getElementById('popup').classList.add('hidden');
+
+  function closeModal() {
+    document.getElementById("popupModal").classList.add("hidden");
   }
 </script>
 
