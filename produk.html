@@ -34,7 +34,7 @@
   </section>
 
   <!-- Filter Produk -->
-  <section class="bg-gradient-to-r from-amber-50 via-lime-50 to-emerald-50 py-10 px-6 text-center max-w-7xl mx-auto">
+ <section class="bg-gradient-to-r from-amber-50 via-lime-50 to-emerald-50 py-10 px-6 text-center w-full">
     <h2 class="text-3xl font-bold mb-6">Pilih Kategori Produk</h2>
     <div id="filterButtons" class="flex flex-wrap justify-center gap-4">
       <!-- Tombol filter akan di-generate JS -->
@@ -42,7 +42,7 @@
   </section>
 
   <!-- Produk -->
-  <section class="bg-gradient-to-r from-amber-50 via-lime-50 to-emerald-50 py-10 px-6 text-center max-w-7xl mx-auto">
+ <section class="bg-gradient-to-r from-amber-50 via-lime-50 to-emerald-50 py-10 px-6 text-center w-full">
     <div id="produkGrid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-8 justify-items-center">
       <!-- Produk akan di-generate via JS -->
     </div>
@@ -66,7 +66,7 @@
         <ul class="list-disc pl-5 space-y-1">
           <li>Bahan premium</li>
           <li>Nyaman digunakan harian</li>
-          <li>Desain simple namun trending</li>
+          <li>Desain simple namun trendi</li>
         </ul>
         <a id="whatsappButton" target="_blank" 
           class="mt-6 inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full transition"
@@ -78,7 +78,7 @@
     </div>
   </div>
   
- <!-- Footer -->
+<!-- Footer -->
 <footer class="bg-gray-900 text-white text-sm pt-12 pb-6 px-6">
   <div class="max-w-6xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
@@ -95,21 +95,6 @@
           <li><a href="produk.html" class="footer-link text-gray-300">Produk</a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="font-bold text-lg mb-4">Hubungi Kami</h4>
-        <div class="flex items-center space-x-3 mb-2">
-          <img src="https://img.icons8.com/ios-glyphs/24/ffffff/whatsapp.png" />
-          <a href="https://wa.me/6285876125581" target="_blank" class="text-gray-300 hover:text-white">WhatsApp Admin 1</a>
-        </div>
-         <div class="flex items-center space-x-3 mb-2">
-          <img src="https://img.icons8.com/ios-glyphs/24/ffffff/whatsapp.png" />
-          <a href="https://wa.me/6285739136522" target="_blank" class="text-gray-300 hover:text-white">WhatsApp Admin 2</a>
-        </div>
-        <div class="flex items-center space-x-3">
-          <img src="https://img.icons8.com/ios-glyphs/24/ffffff/instagram-new.png" />
-          <a href="https://www.instagram.com/official_greendays" target="_blank" class="text-gray-300 hover:text-white">Instagram</a>
-        </div>
-      </div>
     </div>
     <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
       <p class="text-gray-400 text-xs">&copy; 2025 Green Day. All rights reserved.</p>
@@ -120,14 +105,10 @@
         <a href="https://wa.me/6285876125581" target="_blank">
           <img src="https://img.icons8.com/ios-glyphs/24/ffffff/whatsapp.png" />
         </a>
-         <a href="https://wa.me/6285739136522" target="_blank">
-          <img src="https://img.icons8.com/ios-glyphs/24/ffffff/whatsapp.png" />
-        </a>
       </div>
     </div>
   </div>
 </footer>
-
 
   <!-- Floating nav -->
   <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
@@ -171,22 +152,22 @@
       values: [["M","71","51","61"],["L","73","53","63"],["XL","75","55","65"],["XXL","77","57","67"]],
       description: "Hoodie hitam dengan bahan lembut dan desain minimalis."
     },
-    "jacket wp company": {
-      img: "img/h5.jpeg",
+    "Hoodie boxy zipper black": {
+      img: "img/h3.jpeg",
       category: "Hoodie",
       sizes: ["Size", "Panjang", "Lebar", "Lengan"],
-      values: [["M","71","51","61"],["L","73","53","63"],["XL","75","55","65"],["XXL","77","57","67"]],
-      description: "menggunakan bahan kulit synthetic,dengan mengunakan zipper ykk dengan kualitas yang tinggi serta cocok buat para kaum anak muda"
-    },
-    "hodie boxy zipper white": {
-      img: "img/h4.jpeg",
-      category: "Hoodie",
-      sizes: ["Size", "Panjang", "Lebar", "Lengan"],
-      values: [["M","71","51","61"],["L","73","53","63"],["XL","75","55","65"],["XXL","77","57","67"]],
+      values: [["S","68","49","58"],["M","70","51","59"],["L","72","53","60"],["XL","74","55","61"]],
       description: "catton fleece 280 gsm ada juga yang 300 gsm,cocok di buat para kalangan anak muda terutama pada anak muda yang suka dengan fashion street style greendays kami."
     },
+    "Jaket Denim Classic": {
+      img: "img/jaket1.jpeg",
+      category: "Jaket",
+      sizes: ["Size", "Panjang", "Lebar", "Lengan"],
+      values: [["M","69","50","60"],["L","71","52","61"],["XL","73","54","62"]],
+      description: "Jaket denim klasik yang tahan lama dengan desain timeless."
+    },
     "Celana Cargo Army": {
-      img: "img/cargo.jpg",
+      img: "img/cargo1.jpeg",
       category: "Celana",
       sizes: ["Size", "Panjang", "Lingkar Pinggang", "Lebar Kaki"],
       values: [["28","102","78","26"],["30","104","82","27"],["32","106","86","28"]],
